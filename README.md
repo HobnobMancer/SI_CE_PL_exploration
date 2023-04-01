@@ -122,6 +122,8 @@ The BLASTP output was written to the following files:
     * QYM vs PL1 - `results/blastp/qym/qym_pl1.tsv`
     * QYM vs PL9 - `results/blastp/qym/qym_pl9.tsv`
 
+### BLASTP via the NCBI server
+
 To generate the raw alignment (FASTA) files, the proteins of interest were also queried against the protein sequences of the other family members using BLASTP via the NCBI server. 
 
 To do this a plain text file was generated for each family listing the accessions of proteins in the family:
@@ -131,18 +133,70 @@ scripts/cazy/get_fam_acc.sh
 
 The four resulting files were written to `data/accessions`
 
+The protein of interest was used as the query sequence id, all protein accessions extracted from the local CAZyme database for the family of interest were used as the subject ids.
+
+The results (the graphical alignment and alignment FASTA file - for the 100 highest scoring hits) were written to the respect protein subdirs in `results/blastp`.
+
+### Query against the nr-database
+
+The full length protein sequence of each protein was queried against the nr-database using BLASTP via the NCBI server (2023-04-01). 
+
+The results were written to `results/blastp/nr/`.
+
 ### Domain annotations
 
 By combining the BLASTP and dbCAN output, so as to cover the maximum range of each CAZyme domain, the following CAZyme domain ranges were produced:
 
 **Add table**
 
+QYM
+* dbCAN: CE8(696-981)+PL9_1(1695-2096)+PL1(3003-3209)
+* CE8
+* PL1 2456-3368 (against ATC64129.1)
+* PL9 1512-2132 ()
+
 ## Predict protein structures
 
 https://www.biorxiv.org/content/10.1101/2021.08.15.456425v1
 
-## Structural supersistion
+### Predict domains individually
 
+### Chunk predict and structural superimposition
+
+In an attempt to predict the orientation of the three domains in QYM relative to one another, the full length protein sequence (minus signal peptide) was broken down into blocks of 500 Aa, which overlapped one another by 150 Aa.
+
+The blocks were as follows:
+
+1. 20-520
+2. 370-870
+3. 720-1220
+4. 1070-1570
+5. 1420-1920
+6. 1770-2270
+7. 2120-2620
+8. 2470-2970
+9. 2820-3320
+10. 3170-3670
+11. 3520-4020
+12. 3870-4380
+
+The Python script `get_qym_chunks.py` generated a FASTA file for each chunk, which were written to `data/seqs/qym_chunks/*.fasta`.
+```bash
+mkdir data/seqs/qym_chunks -p
+scripts/structure/get_qym_chunks.py
+```
+
+The protein structure for each block was predicted using colabfold, via the Google Colab notebook.
+
+The structures were saved to `results/structures/qym/full`.
+
+## Structural superimposition
+
+### CAZy
+
+### HHpred
+
+### PDB
+
+### Structural alignments
 ...
-
-# A proteins
