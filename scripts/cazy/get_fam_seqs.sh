@@ -43,7 +43,7 @@
 
 # Extract fam seqs from the local CAZyme db to fasta files
 
-cw_extract_db_seqs data/cazy_db/cazy.db --fasta_file data/seqs/pl1.fasta --families PL1
-cw_extract_db_seqs data/cazy_db/cazy.db --fasta_file data/seqs/pl9.fasta --families PL9
-cw_extract_db_seqs data/cazy_db/cazy.db --fasta_file data/seqs/ce8.fasta --families CE8
-cw_extract_db_seqs data/cazy_db/cazy.db --fasta_file data/seqs/ce12.fasta --families CE12
+cw_extract_db_seqs data/cazy_db/cazy.db genbank --fasta_file data/seqs/pl1.fasta --families PL1
+cw_extract_db_seqs data/cazy_db/cazy.db genbank --fasta_file data/seqs/pl9.fasta --families PL9
+cw_extract_db_seqs data/cazy_db/cazy.db genbank --fasta_file data/seqs/ce8.fasta --families CE8
+cw_extract_db_seqs data/cazy_db/cazy.db genbank --fasta_file data/seqs/ce12.fasta --families CE12
