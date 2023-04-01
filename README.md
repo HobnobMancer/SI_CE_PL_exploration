@@ -147,13 +147,16 @@ The results were written to `results/blastp/nr/`.
 
 By combining the BLASTP and dbCAN output, so as to cover the maximum range of each CAZyme domain, the following CAZyme domain ranges were produced:
 
-**Add table**
-
 QYM
 * dbCAN: CE8(696-981)+PL9_1(1695-2096)+PL1(3003-3209)
-* CE8
-* PL1 2456-3368 (against ATC64129.1)
+* CE8 261-1200 (against ATC63710.1)
 * PL9 1512-2132 ()
+* PL1 2456-3368 (against ATC64129.1)
+
+FASTA files of the predicted domains in QYM were written to `data/seqs/qym_domains/*.fasta`:
+* `qym_ce8.fasta`
+* `qym_pl9.fasta`
+* `qym_pl1.fasta`
 
 ## Predict protein structures
 
