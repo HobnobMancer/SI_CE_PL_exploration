@@ -1,0 +1,5 @@
+Select for downloading or viewing reports,Description,Scientific Name,Max Score,Total Score,Query Cover,E value,Per. Ident,Acc. Len,Accession
+Select seq gb|AEI43346.1|,pectate lyase [Paenibacillus mucilaginosus KNP414],Paenibacillus mucilaginosus KNP414,2043,2043,100%,0,100.00%,993,AEI43346.1
+Select seq gb|AFK65394.1|,pectate lyase [Paenibacillus mucilaginosus K02],Paenibacillus mucilaginosus K02,1568,1568,77%,0,98.31%,784,AFK65394.1
+Select seq gb|AFH63317.1|,pectate lyase [Paenibacillus mucilaginosus K02],Paenibacillus mucilaginosus K02,1566,1566,77%,0,98.31%,777,AFH63317.1
+Select seq gb|QYM77803.1|,immunoglobulin domain-containing protein [Horticoccus luteus],Horticoccus luteus,94,94,38%,2E-22,28.74%,4380,QYM77803.1
