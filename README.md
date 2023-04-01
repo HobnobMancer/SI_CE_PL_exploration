@@ -7,13 +7,12 @@ The 4 proteins in CAZy that are annotated with a CE0 and PL9 domain are, and whi
 ## Proteins
 
 
-
-| Group | Accession        | Species                              | NCBI:txid | Length (Aa) | Mass (KDa) | Signal peptide (Y/N) (CS) |
-|-------|------------------|--------------------------------------|-----------|-------------|------------|----------------|
-| 1     | AEI43346.1 (AEI) | _Paenibacillus mulilaginosus KNP414_ | 1036673   | 993         | 107.36     |       Y (39:40)         |
-| 1     | AFH63317.1 (AFH) | _Paenibacillus mucilaginosus K02_    | 997761    | 777         | 84.68      |                |
-| 1     | AFK65394.1 (AFK) | _Paenibacillus mucilaginosus K02_    | 997761    | 784         | 85.65      |                |
-| 2     | QYM77803.1 (QYM) | _Horticoccus luteus_                 | 2862869   | 4380        | 445.71     |                |
+| Group | Accession        | Species                              | NCBI:txid | Locus tag |      Genome      | Length (Aa) | Mass (KDa) | Signal peptide (Y/N) (CS) |
+|-------|------------------|--------------------------------------|-----------|-----------|------------------|-------------|------------|---------------------------|
+| 1     | AEI43346.1 (AEI) | _Paenibacillus mulilaginosus KNP414_ | 1036673   | QYM77803  | GCA_019464535.1  | 993         | 107.36     |         Y (39:40)         |
+| 1     | AFH63317.1 (AFH) | _Paenibacillus mucilaginosus K02_    | 997761    | AFH63317  | GCA_000258535.2  | 777         | 84.68      |         Y (38:39)         |
+| 1     | AFK65394.1 (AFK) | _Paenibacillus mucilaginosus K02_    | 997761    | AFK65394  | CDS (JN225200.1) | 784         | 85.65      |         Y (45:46)         |
+| 2     | QYM77803.1 (QYM) | _Horticoccus luteus_                 | 2862869   | QYM77803  | GCA_019464535.1  | 4380        | 445.71     |         Y (18:19)         |
 
 _Paenibacillus mucilaginosus_ NCBI:txid 61624.
 
@@ -65,7 +64,7 @@ scripts/cazy/download_fam_seqs.sh <email>
 ```
 
 For each CAZy family (PL1, PL9 and CE8), the protein sequences of CAZymes in the family were extracted from the local CAZyme database and written to a multi-sequence FASTA file using `cazy_webscraper`:
-```
+```bash
 scripts/cazy/get_fam_seqs.sh
 ```
 
@@ -73,19 +72,52 @@ Downloaded data:
 
 | Family | Num of accessions | Num of seqs |
 |--------|-------------------|-------------|
-| PL1    | x                 | x           |
-| PL9    | x                 | x           |
-| CE8    | x                 | x           |
+| PL1    | 12,296            | 9,190       |
+| PL9    | 3,497             | 41          |
+| CE8    | 10,662            | 8,204       |
+| CE12   | 4,579             | 3,421       |
 
-BLASTP was run locally (BLAST+), query QMY against each CAZy family protein sequence FASTA file.
-
+The number of unique protein accessions for each family of interest in the local CAZyme database was retrieved using the bash script `count_fam_accs.sh`, and the output was written to `results/fam_counts/num_of_accs.csv`.
+```bash
+scripts/cazy/count_fam_accs.sh
 ```
 
+The number of protein sequences downloaded fro each family of interest and written to a mutli-sequence FASTA File was retrieved using the Python script `count_fam_seqs.py`, and the output was written to `results/fam_counts/num_of_seqs.csv`
+```bash
+scripts/cazy/count_fam_seqs.py
 ```
+
+BLASTP was run locally (BLAST+), query QMY against each CAZy family protein sequence FASTA file, generating a TSV file for each run summarising the alignments and alignemnt FASTA files.
+```bash
+# query AIE against CE12 and PL9
+
+# query AFK against CE12 and PL9
+
+# query AFH against CE12 and PL9
+
+# query QYM against CE8, PL1 and PL9
+```
+
+The BLASTP output was written to the following files:
+1. AIE
+    * AIE vs CE12 - `results/blastp/aie/aie_ce12.tsv`
+    * AIE vs PL9 - `results/blastp/aie/aie_pl9.tsv`
+2. AFH
+    * AFH vs CE12 - `results/blastp/afh/afh_ce12.tsv`
+    * AFH vs PL9 - `results/blastp/afh/afh_pl9.tsv`
+3. AFK
+    * AFK vs CE12 - `results/blastp/afk/afk_ce12.tsv`
+    * AFK vs PL9 - `results/blastp/afk/afk_pl9.tsv`
+1. QYM
+    * QYM vs CE8 - `results/blastp/qym/qym_ce8.tsv`
+    * QYM vs PL1 - `results/blastp/qym/qym_pl1.tsv`
+    * QYM vs PL9 - `results/blastp/qym/qym_pl9.tsv`
 
 ### Domain annotations
 
-...
+By combining the BLASTP and dbCAN output, so as to cover the maximum range of each CAZyme domain, the following CAZyme domain ranges were produced:
+
+**Add table**
 
 ## Predict protein structures
 
