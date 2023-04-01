@@ -122,6 +122,15 @@ The BLASTP output was written to the following files:
     * QYM vs PL1 - `results/blastp/qym/qym_pl1.tsv`
     * QYM vs PL9 - `results/blastp/qym/qym_pl9.tsv`
 
+To generate the raw alignment (FASTA) files, the proteins of interest were also queried against the protein sequences of the other family members using BLASTP via the NCBI server. 
+
+To do this a plain text file was generated for each family listing the accessions of proteins in the family:
+```bash
+scripts/cazy/get_fam_acc.sh
+```
+
+The four resulting files were written to `data/accessions`
+
 ### Domain annotations
 
 By combining the BLASTP and dbCAN output, so as to cover the maximum range of each CAZyme domain, the following CAZyme domain ranges were produced:

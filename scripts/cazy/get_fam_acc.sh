@@ -39,9 +39,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# num_of_accs
+# get_fam_acc
 
-# Retrieve the number of unique protein accessions per CAZy family of interest
+# Retrieve the unique protein accessions per CAZy family of interest
 
 mkdir data/accessions -p
 
