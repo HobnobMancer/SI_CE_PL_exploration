@@ -90,12 +90,16 @@ scripts/cazy/count_fam_seqs.py
 BLASTP was run locally (BLAST+), query QMY against each CAZy family protein sequence FASTA file, generating a TSV file for each run summarising the alignments and alignemnt FASTA files.
 ```bash
 # query AIE against CE12 and PL9
-
-# query AFK against CE12 and PL9
+scripts/blast/blast_aie.sh
 
 # query AFH against CE12 and PL9
+scripts/blast/blast_afh.sh
+
+# query AFK against CE12 and PL9
+scripts/blast/blast_afk.sh
 
 # query QYM against CE8, PL1 and PL9
+scripts/blast/blast_qym.sh
 ```
 
 The BLASTP output was written to the following files:
