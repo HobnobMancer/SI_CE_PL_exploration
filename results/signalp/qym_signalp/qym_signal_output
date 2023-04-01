@@ -1,0 +1,8 @@
+Predicted Proteins
+QYM77803.1 immunoglobulin domain-containing protein [Horticoccus luteus]
+Prediction: Signal Peptide (Sec/SPI)
+
+Cleavage site between pos. 18 and 19. Probability 0.973183
+
+Protein type	Other	Signal Peptide (Sec/SPI)	Lipoprotein signal peptide (Sec/SPII)	TAT signal peptide (Tat/SPI)	TAT Lipoprotein signal peptide (Tat/SPII)	Pilin-like signal peptide (Sec/SPIII)
+Likelihood	0.0003	0.9991	0.0002	0.0002	0.0001	0.0001

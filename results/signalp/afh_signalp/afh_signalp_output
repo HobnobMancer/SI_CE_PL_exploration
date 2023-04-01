@@ -1,0 +1,8 @@
+Predicted Proteins
+AFH63317.1 pectate lyase [Paenibacillus mucilaginosus K02]
+Prediction: Signal Peptide (Sec/SPI)
+
+Cleavage site between pos. 38 and 39. Probability 0.969514
+
+Protein type	Other	Signal Peptide (Sec/SPI)	Lipoprotein signal peptide (Sec/SPII)	TAT signal peptide (Tat/SPI)	TAT Lipoprotein signal peptide (Tat/SPII)	Pilin-like signal peptide (Sec/SPIII)
+Likelihood	0.0005	0.9988	0.0002	0.0002	0.0002	0.0002
