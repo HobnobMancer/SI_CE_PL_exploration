@@ -43,6 +43,8 @@
 
 # Retrieve the number of unique protein accessions per CAZy family of interest
 
+mkdir results/fam_counts
+
 sqlite3 -header -csv data/cazy_db/cazy.db "
 SELECT COUNT(DISTINCT G.genbank_accession) AS Num_of_proteins, F.family AS Family
 FROM Genbanks AS G
