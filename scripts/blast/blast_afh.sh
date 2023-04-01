@@ -48,12 +48,12 @@ mkdir results/blastp/afh/ -p
 # generate TSV file
 blastp \
     -subject data/seqs/ce12.fasta \
-    -query data/seqs/aie_seq.fasta \
-    -out results/blastp/aie/aie_ce12.tsv \
+    -query data/seqs/afh_seq.fasta \
+    -out results/blastp/afh/afh_ce12.tsv \
     -outfmt "6 qseqid sseqid evalue bitscore pident qcovs"
 
 blastp \
     -subject data/seqs/pl9.fasta \
-    -query data/seqs/aie_seq.fasta \
-    -out results/blastp/aie/aie_pl9.tsv \
+    -query data/seqs/afh_seq.fasta \
+    -out results/blastp/afh/afh_pl9.tsv \
     -outfmt "6 qseqid sseqid evalue bitscore pident qcovs"
