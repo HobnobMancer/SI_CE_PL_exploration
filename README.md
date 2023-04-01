@@ -2,10 +2,15 @@
 
 Explore the sequence, structure and function of CAZymes containing a CE and PL9 domain.
 
-The 4 proteins in CAZy that are annotated with a CE0 and PL9 domain are, and which based on sequence similarity fall into two groups.
+The 4 proteins in CAZy that are annotated with a CE0 and PL9 domain are, and which based on sequence similarity fall into two groups: (i) AEI43346.1, AFH63317.1, and AFK65394.1, and (ii) QYM77803.1.
+
+## BLASTP proteins
+
+The four proteins were queried against one another using BLASTP, via the NCBI BLASTP server (2023-04-01).
+
+The output was downloaded from the website and stored in `results/blastp/four_proteins/` dir.
 
 ## Proteins
-
 
 | Group | Accession        | Species                              | NCBI:txid | Locus tag |      Genome      | Length (Aa) | Mass (KDa) | Signal peptide (Y/N) (CS) |
 |-------|------------------|--------------------------------------|-----------|-----------|------------------|-------------|------------|---------------------------|
