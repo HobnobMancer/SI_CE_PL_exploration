@@ -8,9 +8,9 @@ The 4 proteins in CAZy that are annotated with a CE0 and PL9 domain are, and whi
 
 
 
-| Group | Accession        | Species                              | NCBI:txid | Length (Aa) | Mass (KDa) | Signal peptide (Y/N) |
+| Group | Accession        | Species                              | NCBI:txid | Length (Aa) | Mass (KDa) | Signal peptide (Y/N) (CS) |
 |-------|------------------|--------------------------------------|-----------|-------------|------------|----------------|
-| 1     | AEI43346.1 (AEI) | _Paenibacillus mulilaginosus KNP414_ | 1036673   | 993         | 107.36     |                |
+| 1     | AEI43346.1 (AEI) | _Paenibacillus mulilaginosus KNP414_ | 1036673   | 993         | 107.36     |       Y (39:40)         |
 | 1     | AFH63317.1 (AFH) | _Paenibacillus mucilaginosus K02_    | 997761    | 777         | 84.68      |                |
 | 1     | AFK65394.1 (AFK) | _Paenibacillus mucilaginosus K02_    | 997761    | 784         | 85.65      |                |
 | 2     | QYM77803.1 (QYM) | _Horticoccus luteus_                 | 2862869   | 4380        | 445.71     |                |
